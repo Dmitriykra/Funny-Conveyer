@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -1787099267644638396}
   m_Layer: 0
   m_Name: Apple
-  m_TagString: Untagged
+  m_TagString: Apple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,6 +129,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isTakeble: 0
   isInBasket: 0
-  ground: {fileID: 272368155124825610, guid: 22898519337194de29d2d3eb0f1a0841, type: 3}
-  foodPoolObject: {fileID: 0}
+  foodPoolObjectGo: {fileID: 8662076374797407306, guid: 043709e9274d4428886597ddf6872872,
+    type: 3}
+  taskForLevelGo: {fileID: 5133717544555787922, guid: dfaacce34ae384fab9305d56859c151a,
+    type: 3}
   isInGarbage: 0

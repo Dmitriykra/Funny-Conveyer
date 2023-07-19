@@ -9,6 +9,10 @@ TagManager:
   - Ground
   - Bomb
   - Conveyer
+  - Apple
+  - Vine
+  - Banana
+  - Strawberry
   layers:
   - Default
   - TransparentFX
