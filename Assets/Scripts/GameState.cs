@@ -10,7 +10,6 @@ public class GameState : MonoBehaviour
     [SerializeField] GameObject pauseGame;
     [SerializeField] GameObject victoryGame;
     [SerializeField] GameObject enviro;
-    [SerializeField] GameObject nextLevelButton;
     [SerializeField] GameObject conveyer;
     [SerializeField] GameObject gameScreen;
     bool isGamePaused = false;
@@ -20,11 +19,11 @@ public class GameState : MonoBehaviour
     private void Awake()
     {
         canvas = GetComponent<Canvas>();
-        nextLevelButton.SetActive(false);
     }
 
     private void Start()
     {
+        victoryGame.SetActive(false);
 
         if (PlayerPrefs.GetInt("Restart") == 1)
         {
@@ -70,8 +69,8 @@ public class GameState : MonoBehaviour
 
     public void Victory()
     {
+        victoryGame.SetActive(true);
         conveyer.SetActive(false);
-        nextLevelButton.SetActive(true);
     }
 
     void PauseGame()
@@ -105,5 +104,4 @@ public class GameState : MonoBehaviour
         Time.timeScale = 0;
     }
 
-   
 }

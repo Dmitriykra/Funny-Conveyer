@@ -18,6 +18,10 @@ public class Grab : MonoBehaviour
     bool isInHand;
     bool isMobile;
     public float rotationDuration = 1f;
+    Vector3 currentBoxColliderSize;
+    BoxCollider boxCollider;
+    Vector3 currentFoodScale;
+    Vector3 newFoodScale;
 
     private void Awake()
     {
@@ -68,6 +72,8 @@ public class Grab : MonoBehaviour
         if (foodPoolObject.GrabFoodItem() != null)
         {
             selectedFood = foodPoolObject.GrabFoodItem();
+            boxCollider = selectedFood.GetComponent<BoxCollider>();
+            currentFoodScale = selectedFood.transform.localScale;
         }
     }
 
@@ -94,17 +100,32 @@ public class Grab : MonoBehaviour
     public void OnGrab()
     { 
         isHeldingOutToFood = true;
-        //выкл колайдер чтобы аккуратно вынести еду за пределы конвеера
-        selectedFood.GetComponent<BoxCollider>().enabled = false;
+        
+        currentBoxColliderSize = boxCollider.size;
+
+        Debug.Log("был размер бк до " + currentBoxColliderSize);
+
+        Vector3 newSize = currentBoxColliderSize * 0.1f;
+
+        boxCollider.size = newSize;
+
+        Debug.Log("Уменьшил размер бк до " + newSize);
     }
 
     public void InBasket()
     {
         //тянется ли рука к еде
         isHeldingOutToFood = false;
-        //делаю еду снова физичной
-        selectedFood.GetComponent<BoxCollider>().enabled = true;
+
+        //возвращаю исходный размер бк
+        boxCollider.size = currentBoxColliderSize;
+
+        //уменьшаю размер фруктов чтобы больше поместилось
+        newFoodScale = currentFoodScale * 0.7f;
+        selectedFood.transform.localScale = newFoodScale;
+
         selectedFood.GetComponent<Rigidbody>().useGravity = true;
+
         //укладываю в иерархию корзины
         selectedFood.transform.SetParent(basket, true);
 
@@ -166,7 +187,6 @@ public class Grab : MonoBehaviour
         }
 
         transform.rotation = targetRotation;
-        
 
     }
 }

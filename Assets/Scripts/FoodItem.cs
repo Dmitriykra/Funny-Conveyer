@@ -20,7 +20,8 @@ public class FoodItem : MonoBehaviour
        }
 
        //если взятый фрукт является фруктом по заданию
-       if(gameObject.tag == taskForLevel.targetFoodName)
+       if(gameObject.tag ==
+            taskForLevel.targetFoodName)
        {
             correctFood = true;
        }    

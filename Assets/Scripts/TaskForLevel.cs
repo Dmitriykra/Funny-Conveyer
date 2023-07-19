@@ -11,10 +11,12 @@ public class TaskForLevel : MonoBehaviour
     [SerializeField] GameState gameState;
     [SerializeField] TextMeshProUGUI taskForLeveleTxt;
     [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] TextMeshProUGUI flyText;
     [SerializeField] List<string> foodNames = new List<string>();
     [SerializeField] int targetNumber;
     [SerializeField] Transform gameCamera;
     [SerializeField] float duration = 1f;
+    
     Vector3 startCameraPos;
     Vector3 targetCameraPos = new Vector3(0.282999992f, 1.25399995f, -1.58599997f);
     Vector3 targetCameraRot = new Vector3(16.4781017f, 353.30658f, 0.0768934786f);
@@ -37,8 +39,8 @@ public class TaskForLevel : MonoBehaviour
     void InitFoodList()
     {
         foodNames.Add("Apple");
-        foodNames.Add("Orange");
-        foodNames.Add("Cherry");
+        foodNames.Add("Strawberry");
+        foodNames.Add("Banana");
         foodNames.Add("Vine");
 
         int maxTargetNumber = foodNames.Count + 2;
@@ -62,28 +64,52 @@ public class TaskForLevel : MonoBehaviour
     }
 
     void InitScore()
-    {
+    {        
         scoreText.text = "Score: " + scoreCount + "/" + targetNumber;
     }
 
     public void UpdateScore(int score)
     {
+        FlyTextAnim(score);
+
         scoreCount += score;
+
         InitScore();
 
         if (scoreCount < 0)
         {
-            gameState.GameOver();
-            taskForLeveleTxt.text = "Game Over";
+            StartCoroutine(GameOverCor());
         }
 
         if (scoreCount == targetNumber)
         {
             InitScore();
             StartCoroutine(VictoryCondition());
+        }
+    }
 
+    void FlyTextAnim(int score)
+    {
+        flyText.text = null;
+        if (score > 0)
+        {
+            flyText.text += "+1";
 
         }
+        else
+        {
+            flyText.text += "-1";
+        }
+
+        flyText.GetComponent<Animator>().SetTrigger("Score");
+    }
+
+    IEnumerator GameOverCor()
+    {
+        taskForLeveleTxt.text = "Game Over";
+        yield return new WaitForSeconds(1f);
+        gameState.GameOver();
+        Debug.Log("Game over truly");
     }
 
     IEnumerator VictoryCondition()
