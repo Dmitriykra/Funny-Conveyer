@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class Grab : MonoBehaviour
@@ -11,6 +10,7 @@ public class Grab : MonoBehaviour
     [SerializeField] Transform basket;
     [SerializeField] Transform middlFinger;
     [SerializeField] FoodPoolObject foodPoolObject;
+    [SerializeField] SoundManager soundManager;
     List<GameObject> foodInBasket = new List<GameObject>();
     GameObject selectedFood;
     Animator animator;
@@ -59,6 +59,7 @@ public class Grab : MonoBehaviour
             !isInHand)
             {
                 Debug.Log("Mob");
+
                 StartHandAnimation();
             }
         }
@@ -117,12 +118,12 @@ public class Grab : MonoBehaviour
         //тянется ли рука к еде
         isHeldingOutToFood = false;
 
-        //возвращаю исходный размер бк
-        boxCollider.size = currentBoxColliderSize;
-
-        //уменьшаю размер фруктов чтобы больше поместилось
-        newFoodScale = currentFoodScale * 0.7f;
+        // уменьшаю размер фруктов чтобы больше поместилось
+        newFoodScale = currentFoodScale * 0.6f;
         selectedFood.transform.localScale = newFoodScale;
+
+        //возвращаю иходный размер бк
+        boxCollider.size = currentBoxColliderSize;
 
         selectedFood.GetComponent<Rigidbody>().useGravity = true;
 
@@ -136,6 +137,7 @@ public class Grab : MonoBehaviour
 
         if(selectedFood.tag == "Bomb")
         {
+            soundManager.BoomSound();
             Debug.Log("Boom!, food in basket " + foodInBasket.Count);
             foreach(GameObject gameObjects in foodInBasket)
             {
@@ -151,6 +153,10 @@ public class Grab : MonoBehaviour
             foodInBasket.Clear();
 
             selectedFood.GetComponent<BombItem>().BombBang();
+        }
+        else
+        {
+            soundManager.GetFoodAudio();
         }
 
         isInHand = false;

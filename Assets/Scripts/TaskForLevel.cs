@@ -27,9 +27,11 @@ public class TaskForLevel : MonoBehaviour
     public string targetFoodName;
     int randomFoodInd;
     int scoreCount = 0;
+    bool isWin;
 
     void Start()
     {
+        
         instance = this;
         InitFoodList();
         InitScore();
@@ -70,27 +72,32 @@ public class TaskForLevel : MonoBehaviour
 
     public void UpdateScore(int score)
     {
-        FlyTextAnim(score);
-
-        scoreCount += score;
-
-        InitScore();
-
-        if (scoreCount < 0)
+        if (!isWin)
         {
-            StartCoroutine(GameOverCor());
-        }
+            FlyTextAnim(score);
 
-        if (scoreCount == targetNumber)
-        {
+            scoreCount += score;
+
             InitScore();
-            StartCoroutine(VictoryCondition());
+
+            if (scoreCount < 0)
+            {
+                StartCoroutine(GameOverCor());
+            }
+
+            if (scoreCount == targetNumber)
+            {
+                InitScore();
+                StartCoroutine(VictoryCondition());
+            }
         }
+        
     }
 
     void FlyTextAnim(int score)
     {
         flyText.text = null;
+
         if (score > 0)
         {
             flyText.text += "+1";
@@ -109,11 +116,11 @@ public class TaskForLevel : MonoBehaviour
         taskForLeveleTxt.text = "Game Over";
         yield return new WaitForSeconds(1f);
         gameState.GameOver();
-        Debug.Log("Game over truly");
     }
 
     IEnumerator VictoryCondition()
     {
+        isWin = true;
         while (elapsedTime < duration)
         {
             float percenytCompleat = elapsedTime / duration;

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System;
+using System.Collections;
 
 public class GameState : MonoBehaviour
 {
@@ -11,8 +11,14 @@ public class GameState : MonoBehaviour
     [SerializeField] GameObject victoryGame;
     [SerializeField] GameObject enviro;
     [SerializeField] GameObject conveyer;
+    [SerializeField] GameObject foodPoolObject;
     [SerializeField] GameObject gameScreen;
+    [SerializeField] GameObject pauseBtn;
+    [SerializeField] SoundManager soundManager;
+
     bool isGamePaused = false;
+    public float moveDuration = 2f; 
+    public float targetHeight = 5f;
 
     Canvas canvas;
 
@@ -37,6 +43,8 @@ public class GameState : MonoBehaviour
 
     public void StartMenu()
     {
+       
+        pauseGame.SetActive(false);
         gameScreen.SetActive(false);
         enviro.SetActive(false);
         canvas.renderMode = RenderMode.ScreenSpaceCamera;
@@ -51,6 +59,12 @@ public class GameState : MonoBehaviour
         canvas.renderMode = RenderMode.ScreenSpaceOverlay;
         Time.timeScale = 1;
         startMenu.SetActive(false);
+    }
+
+    public void ExitToMenu()
+    {
+        SceneManager.LoadScene(0);
+        PlayerPrefs.SetInt("Restart", 0);
     }
 
     public void HandleButtonClick()
@@ -69,8 +83,31 @@ public class GameState : MonoBehaviour
 
     public void Victory()
     {
+        pauseBtn.SetActive(false);
+        soundManager.WinSound();
         victoryGame.SetActive(true);
         conveyer.SetActive(false);
+
+        //все улетает вверх
+        StartCoroutine(MoveUp());
+    }
+
+    IEnumerator MoveUp()
+    {
+        Vector3 startPosition = foodPoolObject.transform.position;
+        Vector3 targetPosition = foodPoolObject.transform.position + Vector3.up * targetHeight;
+
+        float elapsedTime = 0f;
+        while (elapsedTime < moveDuration)
+        {
+            foodPoolObject.transform.position = Vector3.Lerp(startPosition, targetPosition, elapsedTime / moveDuration);
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        // Убедимся, что объект точно достиг целевой позиции
+        //foodPoolObject.transform.position = targetPosition;
     }
 
     void PauseGame()
@@ -87,6 +124,7 @@ public class GameState : MonoBehaviour
 
     public void RestartGame()
     {
+        pauseGame.SetActive(false);
         SceneManager.LoadScene(0);
         PlayerPrefs.SetInt("Restart", 1);
         StartGame();
@@ -100,6 +138,7 @@ public class GameState : MonoBehaviour
 
     public void GameOver()
     {
+        soundManager.GameOverSound();
         gameOver.SetActive(true);
         Time.timeScale = 0;
     }
