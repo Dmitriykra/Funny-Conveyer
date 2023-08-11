@@ -6,7 +6,7 @@ public class FoodPoolObject : MonoBehaviour
 {
     [SerializeField] GameObject[] foodPrefabs;
     public int poolSize = 50;
-    List<GameObject> objectPool;
+    List<GameObject> objectPool ;
     public static FoodPoolObject instance;
 
     // Start is called before the first frame update
@@ -42,14 +42,18 @@ public class FoodPoolObject : MonoBehaviour
         ShuffleObjectPool();
 
         // Проходимся по объектам в пуле и выбираем первый неактивный объект
-        for (int i = 0; i < objectPool.Count; i++)
+        if (objectPool != null)
         {
-            if (!objectPool[i].activeInHierarchy)
+            for (int i = 0; i < objectPool.Count; i++)
             {
-                objectPool[i].SetActive(true);
-                return objectPool[i];
+                if (!objectPool[i].activeInHierarchy)
+                {
+                    objectPool[i].SetActive(true);
+                    return objectPool[i];
+                }
             }
         }
+        
 
         // Если все объекты в пуле заняты, создаем новый экземпляр объекта и добавляем его в пул
         var randomFood = Random.Range(0, foodPrefabs.Length);
@@ -65,16 +69,18 @@ public class FoodPoolObject : MonoBehaviour
     private void ShuffleObjectPool()
     {
         // Алгоритм перемешивания "тасования Фишера–Йетса"
-        int n = objectPool.Count;
-        while (n > 1)
+        if (objectPool != null)
         {
-            n--;
-            int k = Random.Range(0, n + 1);
-            GameObject value = objectPool[k];
-            objectPool[k] = objectPool[n];
-            objectPool[n] = value;
+            int n = objectPool.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = Random.Range(0, n + 1);
+                GameObject value = objectPool[k];
+                objectPool[k] = objectPool[n];
+                objectPool[n] = value;
+            }
         }
-
     }
 
     public GameObject GrabFoodItem()

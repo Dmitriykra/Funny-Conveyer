@@ -26,12 +26,11 @@ public class TaskForLevel : MonoBehaviour
     public static TaskForLevel instance;
     public string targetFoodName;
     int randomFoodInd;
-    int scoreCount = 0;
+    int scoreCount;
     bool isWin;
 
     void Start()
     {
-        
         instance = this;
         InitFoodList();
         InitScore();
@@ -40,10 +39,12 @@ public class TaskForLevel : MonoBehaviour
 
     void InitFoodList()
     {
-        foodNames.Add("Apple");
-        foodNames.Add("Strawberry");
-        foodNames.Add("Banana");
-        foodNames.Add("Vine");
+        foodNames.Add("Candy");
+        foodNames.Add("Corn");
+        foodNames.Add("Fudge");
+        foodNames.Add("Gummdrop");
+        foodNames.Add("Gummy");
+        foodNames.Add("Lollypop");
 
         int maxTargetNumber = foodNames.Count + 2;
         targetNumber = Random.Range(1, maxTargetNumber);

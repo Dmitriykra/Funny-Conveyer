@@ -119,7 +119,7 @@ public class Grab : MonoBehaviour
         isHeldingOutToFood = false;
 
         // уменьшаю размер фруктов чтобы больше поместилось
-        newFoodScale = currentFoodScale * 0.6f;
+        newFoodScale = currentFoodScale * 0.4f;
         selectedFood.transform.localScale = newFoodScale;
 
         //возвращаю иходный размер бк

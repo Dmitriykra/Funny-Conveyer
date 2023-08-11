@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Happy Garden
-  productName: Happy Garden
+  companyName: Shugar Fruit Collection
+  productName: Shugar Fruit Collection
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -155,7 +155,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.happy.garden.game
+    Android: shugar.fruit.collection
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -249,9 +249,9 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: /Users/dmytrokravtsov/Library/Mobile Documents/com~apple~CloudDocs/open_soil_key/Funny
-    Conveyer/Funny Conveyer.keystore
-  AndroidKeyaliasName: alias
+  AndroidKeystoreName: /Users/dmytrokravtsov/Unity projects/Shugar Fruit Collection/Shugar
+    Fruit Collection.keystore
+  AndroidKeyaliasName: shugar fruit collection al
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1

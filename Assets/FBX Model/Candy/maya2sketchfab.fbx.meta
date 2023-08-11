@@ -1,0 +1,371 @@
+fileFormatVersion: 2
+guid: 6e77aaee70dee4180be4878713b5a8de
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Atomic Fireball Blue
+    second: {fileID: 2800000, guid: 9062847356fc648f68f56f6d8b69a14e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Atomic Fireball Green
+    second: {fileID: 2800000, guid: a2680f1a619184ec691fbc4dff20ad1c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Atomic Fireball Orange
+    second: {fileID: 2800000, guid: 6e858ee63bbe640ddb2adaa8f78c3e1a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Atomic Fireball Pink
+    second: {fileID: 2800000, guid: 66336b24e8013467695a4a21b694c47e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Atomic Fireball Purple
+    second: {fileID: 2800000, guid: 8db735447fa264551af64db05bca5df4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Atomic Fireball Red
+    second: {fileID: 2800000, guid: cccbdc37d496b4318a033eb5ba680370, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Candy Corn
+    second: {fileID: 2800000, guid: c491304deb0ed451e9a3e57614ab0f1a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Candy Swirl Blue
+    second: {fileID: 2800000, guid: 1ff22a9f80c274b219100540e91d3237, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Candy Swirl Green
+    second: {fileID: 2800000, guid: 1b4cbce2554c54fb5abfc41eb3e9ea4a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Candy Swirl Orange
+    second: {fileID: 2800000, guid: 76e33c0aabdb440c4b71b09877c6d021, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Candy Swirl Pink
+    second: {fileID: 2800000, guid: 784c807353792461e9dda13b9564cc81, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Candy Swirl Purple
+    second: {fileID: 2800000, guid: 564368e89590c48348b0c79cc346f90a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Candy Swirl Red
+    second: {fileID: 2800000, guid: 3f25119c19ea24796bde88c541c101d8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Candy Twist Blue
+    second: {fileID: 2800000, guid: 227bb00c4bda5462cb6cb4682254ceac, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Candy Twist Green
+    second: {fileID: 2800000, guid: 11cbe9b6efacf421babfe4ec65289585, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Candy Twist Orange
+    second: {fileID: 2800000, guid: f1f470a7ad24447c984c3cee09a6b411, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Candy Twist Pink
+    second: {fileID: 2800000, guid: 196d7836e7ac044919a1296e05db72ae, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Candy Twist Purple
+    second: {fileID: 2800000, guid: 0d368ab232ed7480eb8eec256048d989, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Candy Twist Red
+    second: {fileID: 2800000, guid: c1bd7cc1d3d764d3a8272d88004c2577, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Candy Wrap Blue
+    second: {fileID: 2800000, guid: 42fc8bce8fb5c492f9183a42d7ac4fe8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Candy Wrap Green
+    second: {fileID: 2800000, guid: f476b80782ee74bac9c942502745640e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Candy Wrap Orange
+    second: {fileID: 2800000, guid: 7ca62239b6fbf4983b685d3bfeeec51c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Candy Wrap Pink
+    second: {fileID: 2800000, guid: e7c25fbcc726546aaadc6d367470db6d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Candy Wrap Purple
+    second: {fileID: 2800000, guid: 06d1bd74b4eaa4d648aa56844bcefc03, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Candy Wrap Red
+    second: {fileID: 2800000, guid: 47b2a38c82913492390bfa0464ab7166, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Caramel
+    second: {fileID: 2800000, guid: 34bb8854f3729416d9218ca3bc1a5db4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Fudge
+    second: {fileID: 2800000, guid: 2fafee35f3ceb4334b4d5eb27cb67eda, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Gum Drop Blue
+    second: {fileID: 2800000, guid: 778632e637d91486fb7dcd21fae87083, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Gum Drop Green
+    second: {fileID: 2800000, guid: b9011b4f86cd84abaade9e400e9f5b31, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Gum Drop Orange
+    second: {fileID: 2800000, guid: 4836ad2fbc69447308eb922e0dec92e2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Gum Drop Pink
+    second: {fileID: 2800000, guid: 7455f3e9d28eb4826829717ed7e25535, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Gum Drop Purple
+    second: {fileID: 2800000, guid: c91aae9028b214239a770db52b995daf, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Gum Drop Red
+    second: {fileID: 2800000, guid: 1f3d3021f133c456b8e2f921bd99ce12, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Gummy Blue
+    second: {fileID: 2800000, guid: 5ceabbd1bcf7a442f8427a49cdced0fd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Gummy Green
+    second: {fileID: 2800000, guid: 1b84af05a6db946c790f7754ef2658e2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Gummy Orange
+    second: {fileID: 2800000, guid: 55178369289aa4b10803cce2268267b3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Gummy Pink
+    second: {fileID: 2800000, guid: 5865e49d3d8754e6196be75da2f6a637, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Gummy Purple
+    second: {fileID: 2800000, guid: fc8f6ddf96211459f87b8aacf02ecfde, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Gummy Red
+    second: {fileID: 2800000, guid: 03a4fc84ca3784bb78311bdd8b8a17a8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Jar
+    second: {fileID: 2800000, guid: 8dc0705d8c03d42d7a0602c5fbf337ae, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Lemondrop
+    second: {fileID: 2800000, guid: a12a1ca590a3c42f492f2714175ca377, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Linedrop
+    second: {fileID: 2800000, guid: 0ed7126b8d8d14d76b15736be1ff9563, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Marshmallow Twist
+    second: {fileID: 2800000, guid: 48bc543935d2046cf89d424e4c07c947, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Orangedrop
+    second: {fileID: 2800000, guid: f9eb861fc136d42178b6b4b4c8d6643a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Peppermint Candy Canes
+    second: {fileID: 2800000, guid: 7c611166bfd45426dbdd28c1e681c18f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Root Beer Barrel
+    second: {fileID: 2800000, guid: 7a1e719bb7a014bd2bdc18e1f527a00e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Taffy Blue
+    second: {fileID: 2800000, guid: 53fb887da44d047d89e2275abe00445c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Taffy Green
+    second: {fileID: 2800000, guid: 54532594b8f664d1db0c55df7d7e5fa4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Taffy Orange
+    second: {fileID: 2800000, guid: b722c22b52cc64041815f2ff120ffa46, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Taffy Pink
+    second: {fileID: 2800000, guid: 4b7a72dd327044e3a9fead2b5e23b1d4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Taffy Purple
+    second: {fileID: 2800000, guid: 14cacf2bd187349cf9e7f54c5eae491e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Taffy Red
+    second: {fileID: 2800000, guid: 95246f39ddfd04158a8fc7d041d852e4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood grain v1
+    second: {fileID: 2800000, guid: 78885a84c4d4b42c2a6d03b57ab91cd2, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
