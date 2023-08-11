@@ -9,7 +9,6 @@ public class FoodItem : MonoBehaviour
 {
     [SerializeField] public bool isTakeble = false;
     [SerializeField] public bool isInBasket = false;
-    //[SerializeField] GameObject foodPoolObjectGo;
     FoodPoolObject foodPoolObject = FoodPoolObject.instance; 
     Conveyer conveyer;
     TaskForLevel taskForLevel = TaskForLevel.instance;
@@ -17,14 +16,24 @@ public class FoodItem : MonoBehaviour
     bool correctFood;
     private IAccelerable accelerable, decreaseTime;
     private FoodSpawner _foodSpawner;
+    
+    Conveyer _conveyer;
+
+    private void Awake()
+    {
+        
+    }
 
     private void Start()
     {
-        if (conveyer != null)
+        //_conveyer = Conveyer.instance;
+        
+        //Закоментил доступ к интерфейсу чтобы проверить Conveyer.instance
+        /*if (conveyer != null)
         {
             conveyer = FindObjectOfType<Conveyer>();
             accelerable = conveyer.GetComponent<Conveyer>();
-        }
+        }*/
 
         if (_foodSpawner != null)
         {
@@ -82,6 +91,15 @@ public class FoodItem : MonoBehaviour
             //если нет, ускоряем конвеер
             else
             {
+                if (Conveyer.instance != null)
+                {
+                    Debug.Log("_conveyer " + _conveyer);
+                    Conveyer.instance.IncreaseSpeed();
+                }
+                else
+                {
+                    Debug.Log("_conveyer null" + _conveyer);
+                }
                 if (accelerable != null)
                 {
                     Debug.Log(1);

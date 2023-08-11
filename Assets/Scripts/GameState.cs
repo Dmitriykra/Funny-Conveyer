@@ -48,7 +48,7 @@ public class GameState : MonoBehaviour
         gameScreen.SetActive(false);
         enviro.SetActive(false);
         canvas.renderMode = RenderMode.ScreenSpaceCamera;
-        Time.timeScale = 0;
+        Time.timeScale = 1;
         startMenu.SetActive(true);
     }
 
