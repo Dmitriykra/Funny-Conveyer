@@ -13,10 +13,12 @@ public class SoundManager : MonoBehaviour
     [SerializeField] AudioClip boomSound;
     [SerializeField] AudioClip gameOverSound;
     [SerializeField] AudioClip winSound;
+    public static SoundManager instance;
     // Start is called before the first frame update
 
     private void Start()
     {
+        instance = this;
         mainMusicSource = gameObject.AddComponent<AudioSource>();
         takeFood = gameObject.AddComponent<AudioSource>();
         gameState = gameObject.AddComponent<AudioSource>();

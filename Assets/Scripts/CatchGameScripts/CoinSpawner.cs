@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CoinSpawner : MonoBehaviour
 {
@@ -35,5 +36,10 @@ public class CoinSpawner : MonoBehaviour
             yield return new WaitForSeconds(timeToSpawn);
             Destroy(gameObject, 15f);
         }        
+    }
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

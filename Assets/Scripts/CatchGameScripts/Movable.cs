@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -5,10 +6,11 @@ public class Movable : MonoBehaviour
 {
     float horizontalMove;
     float sideBorder = 3f;
-    float moveSpeed = 50f;
+    float moveSpeed = 500f;
     public TextMeshProUGUI currentScore;
     int totalScoreNumber = 0;
     int score;
+    public SoundManager _soundManager;
     
     // Start is called before the first frame update
     void Start()
@@ -48,12 +50,12 @@ public class Movable : MonoBehaviour
         return Screen.width;
     }
 
-
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter(Collision other)
     {
         Debug.Log(other.gameObject.name);
-        if(other.gameObject.name.Contains("Coin"))
+        if(other.gameObject.name.Contains("Apple"))
         {
+            _soundManager.GetFoodAudio();
             Score();
             Destroy(other.gameObject);
         }
