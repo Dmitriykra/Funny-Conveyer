@@ -41,9 +41,13 @@ public class GameState : MonoBehaviour
         }
     }
 
+    public void CatchGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+    
     public void StartMenu()
     {
-       
         pauseGame.SetActive(false);
         gameScreen.SetActive(false);
         enviro.SetActive(false);

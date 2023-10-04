@@ -7,7 +7,7 @@ public class BombItem : MonoBehaviour
     [SerializeField] GameObject boomEffect;
     [SerializeField] GameObject sparksEffect;
  
-    public void BombBang()
+    public void BadaBoom()
     {
         gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
 

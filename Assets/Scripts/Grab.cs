@@ -133,7 +133,7 @@ public class Grab : MonoBehaviour
         foodInBasket.Add(selectedFood);
 
         //предотвращаю повторное взаимодействие
-        selectedFood.GetComponent<FoodItem>().FoodItemInBasket();
+        selectedFood.GetComponent<FoodItem>().CandyInBasket();
 
         if(selectedFood.tag == "Bomb")
         {
@@ -152,7 +152,7 @@ public class Grab : MonoBehaviour
             //чистим список в корзине
             foodInBasket.Clear();
 
-            selectedFood.GetComponent<BombItem>().BombBang();
+            selectedFood.GetComponent<BombItem>().BadaBoom();
         }
         else
         {

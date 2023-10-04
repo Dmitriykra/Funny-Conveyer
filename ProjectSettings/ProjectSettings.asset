@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Shugar Fruit Collection
-  productName: Shugar Fruit Collection
+  companyName: Lady Lollipops
+  productName: Lady Lollipops
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -155,7 +155,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: shugar.fruit.collection
+    Android: ladylollipops.dv
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -249,9 +249,9 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: /Users/dmytrokravtsov/Unity projects/Shugar Fruit Collection/Shugar
-    Fruit Collection.keystore
-  AndroidKeyaliasName: shugar fruit collection al
+  AndroidKeystoreName: /Users/dmytrokravtsov/Library/Mobile Documents/com~apple~CloudDocs/keystores_eclips/Lady
+    Lollipops.keystore
+  AndroidKeyaliasName: lady lollipops alias
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
@@ -274,7 +274,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: cd3cc1bdb7f40461492128f41dbaf85b, type: 3}
+      m_Icon: {fileID: 2800000, guid: 3b6a46c9d45554b82b99761ce14fda68, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

@@ -19,22 +19,8 @@ public class FoodItem : MonoBehaviour
     
     Conveyer _conveyer;
 
-    private void Awake()
-    {
-        
-    }
-
     private void Start()
     {
-        //_conveyer = Conveyer.instance;
-        
-        //Закоментил доступ к интерфейсу чтобы проверить Conveyer.instance
-        /*if (conveyer != null)
-        {
-            conveyer = FindObjectOfType<Conveyer>();
-            accelerable = conveyer.GetComponent<Conveyer>();
-        }*/
-
         if (_foodSpawner != null)
         {
             _foodSpawner = FindObjectOfType<FoodSpawner>();
@@ -75,7 +61,7 @@ public class FoodItem : MonoBehaviour
         }
     }
 
-    public void FoodItemInBasket()
+    public void CandyInBasket()
     {
         //если не бомба, продолжаем игру
         if (!gameObject.CompareTag("Bomb"))
@@ -93,26 +79,18 @@ public class FoodItem : MonoBehaviour
             {
                 if (Conveyer.instance != null)
                 {
-                    Debug.Log("_conveyer " + _conveyer);
                     Conveyer.instance.IncreaseSpeed();
                 }
-                else
-                {
-                    Debug.Log("_conveyer null" + _conveyer);
-                }
+            
                 if (accelerable != null)
                 {
-                    Debug.Log(1);
                     accelerable.IncreaseSpeed();
                 }
 
                 if (decreaseTime != null)
                 {
-                    Debug.Log(2);
                     decreaseTime.IncreaseSpeed();
                 }
-                
-                
             }
         } 
     }    

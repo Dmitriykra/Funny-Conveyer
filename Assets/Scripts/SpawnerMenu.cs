@@ -15,10 +15,10 @@ public class SpawnerMenu : MonoBehaviour
 
     IEnumerator SpawndFood()
     {
-        while (true)
+        while (true) 
         {
             int randomIndex = Random.Range(0, _gameObjects.Length);
-            var spawnRange = Random.Range(200, 300);
+            var spawnRange = Random.Range(150, 200);
             var position = new Vector3(spawnRange, transform.position.y, transform.position.z);
             GameObject newFood = Instantiate(_gameObjects[randomIndex], position, transform.rotation);
             newFood.transform.SetParent(this.transform);
